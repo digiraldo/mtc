@@ -36,14 +36,13 @@
     list-style: none;
 }
 
-@mixin boto($bg-color, $tx-color, $tx-size: 2rem) {
+@mixin boto($bg-color, $tx-color) {
     background-color: $bg-color;
     color: $tx-color;
     padding: 1rem 3rem;
     //margin-top: 2rem;
-    font-size: $tx-size;
     text-decoration: none;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-weight: $bold;
     border-radius: .5rem;
     //width: 90%;
@@ -60,31 +59,35 @@
     } 
 }
 
-@mixin boton($bgColor, $display) {
+@mixin boton($bgColor, $display, $txtColor: $blanco) {
     background-color: $bgColor;
-    color: $blanco;
+    color: $txtColor;
     font-weight: $bold;
     text-decoration: none;
     padding: 1rem 3rem;
     text-align: center;
     margin-top: $separacion / 2;
     display: $display;
+    border-radius: .5rem;
     border: none;
+    transition: all .3s ease-in-out;
 
     &:hover {
-        background-color: darken($bgColor, 5);
+        padding: 1rem 4rem;
+        background-color: darken($bgColor, 10);
+        color: lighten($txtColor, 8);  // Aclarar color fondo;
         cursor: pointer;
     }
 }
 
-@mixin brillar {
-    .brillar {
+@mixin brillo($borde: 0) {
+    .brillo {
         picture {
             position: relative;
             margin: 0;
             padding: 0;
             overflow: hidden;
-    
+            border-radius: $borde;
             &:hover+span {
                 bottom: -36px;
                 opacity: 1;
@@ -104,6 +107,7 @@
         content: '';
         width: 50%;
         height: 100%;
+        
         background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
         background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
         -webkit-transform: skewX(-25deg);

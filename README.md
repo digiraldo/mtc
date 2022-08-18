@@ -140,4 +140,16 @@ npm rebuild jpegtran-bin
 ##
 [HTML 4 Entity Names](https://www.w3schools.com/charsets/ref_html_entities_4.asp)
 ##
+
+
+## COMANDOS ESPAñOL
+
+|Vocal minúscu  |Vocal Mayúscu  |Varios Español |
+|---------------|---------------|---------------|
+|á = ALT + 160. |Á = ALT + 181. |ñ = ALT + 164. |
+|é = ALT + 130. |É = ALT + 144. |Ñ = ALT + 165. |
+|í = ALT + 161. |Í = ALT + 214. |¡ = ALT + 163. |
+|ó = ALT + 162. |Ó = ALT + 224. |¿ = ALT + 168. |
+|ú = ALT + 163. |Ú = ALT + 233. |@ = ATR + 64.. |
+
 > [Inicio](#inicio-de-proyecto-o-plantilla-con-sass-y-gulp)

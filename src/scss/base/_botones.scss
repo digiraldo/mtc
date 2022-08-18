@@ -23,11 +23,11 @@
 }
 
 .boton-perla {
-    @include boton($perla, inline-block);
+    @include boton($perla, inline-block, $noche);
 }
 
 .boton-perla-block {
-    @include boton($perla, block);
+    @include boton($perla, block, $noche);
 }
 
 .boton-roja {
@@ -39,9 +39,9 @@
 }
 
 .boton-destello {
-    @include boton($destello, inline-block);
+    @include boton($destello, inline-block, $perla);
 }
 
 .boton-destello-block {
-    @include boton($destello, block);
+    @include boton($destello, block, $perla);
 }

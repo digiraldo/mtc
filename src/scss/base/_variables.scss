@@ -7,8 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 // Fuentes
-$fuente_principal: 'Montserrat', sans-serif; // CEM
-$fuente_secundaria: 'Lato', sans-serif;
+$fuente_principal: 'Lato', sans-serif;
+$fuente_secundaria: 'Montserrat', sans-serif; // CEM
 $fuente_calendario: 'Roboto Condensed', sans-serif;
 
 // Tamaño de Media Queries
@@ -49,6 +49,7 @@ $delgada: 300;
 $regular : 400;
 $bold: 700;
 $black: 900
+
 
 // Oscurecer un color, odd es para seleccionar los impares de la lista
 // li:nth-child(odd) {
