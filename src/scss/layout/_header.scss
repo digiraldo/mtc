@@ -1,0 +1,46 @@
+.header {
+    background-color: $noche;
+    padding: 0.6rem 0 0.6rem 0;
+
+}
+
+.barra {
+    display: flex;
+    flex-direction: column;
+
+    img{
+        max-width: 23.6rem;
+        width: 100%;
+        height: auto;
+    }
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+.navegacion {
+    @include tablet {
+        display: flex;
+        align-items: center;
+    }
+    a {
+        color: $perla;
+        text-decoration: none;
+        margin: 1rem 0 1rem 0;
+        font-size: 1.4rem;
+        display: block;
+        text-align: center;
+
+        @include tablet {
+            margin-right: 2rem;
+            font-size: 1.43rem;
+
+            &:last-of-type {  // Aplicar al ultimo elemento
+                margin-right: 0;
+            }
+        }
+    }
+}

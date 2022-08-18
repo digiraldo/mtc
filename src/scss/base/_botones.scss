@@ -1,0 +1,47 @@
+.boton-amarillo {
+    @include boton($amarillo, inline-block);
+}
+
+.boton-amarillo-block {
+    @include boton($amarillo, block);
+}
+
+.boton-verde {
+    @include boton($verde, inline-block);
+}
+
+.boton-verde-block {
+    @include boton($verde, block);
+}
+
+.boton-noche {
+    @include boton($noche, inline-block);
+}
+
+.boton-noche-block {
+    @include boton($noche, block);
+}
+
+.boton-perla {
+    @include boton($perla, inline-block);
+}
+
+.boton-perla-block {
+    @include boton($perla, block);
+}
+
+.boton-roja {
+    @include boton($roja, inline-block);
+}
+
+.boton-roja-block {
+    @include boton($roja, block);
+}
+
+.boton-destello {
+    @include boton($destello, inline-block);
+}
+
+.boton-destello-block {
+    @include boton($destello, block);
+}
