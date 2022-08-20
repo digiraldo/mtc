@@ -1,6 +1,8 @@
 /* ---------Globales--------- */
 /* ---------Globales--------- */
 
+@use 'variables' as v;
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -9,12 +11,12 @@ html {
     box-sizing: inherit;
 }
 body {
-    font-family: $fuente_principal;
+    font-family: v.$fuente_principal;
     font-size: 1.6rem;
     line-height: 1.8;
 }
 p {
-    color: $noche;
+    color: v.$noche;
     font-size: 2rem;
 }
 .contenedor {
@@ -35,8 +37,8 @@ picture {
 }
 
 h1, h2, h3 {
-    font-family: $fuente_principal;
-    margin: calc($separacion / 2) 0;
+    font-family: v.$fuente_principal;
+    margin: calc(v.$separacion / 2) 0;
     font-weight: 300;
     text-align: center;
     

@@ -1,23 +1,25 @@
 /** Media Queries **/
-@mixin telefono {
-    @media (min-width: #{$telefono}) {
-        @content;
-    }
-}
+/** Media Queries **/
 
-@mixin tablet {
-    @media (min-width: #{$tablet}) {
+@use 'variables' as v;
+
+@mixin telefono {
+    @media (min-width: v.$telefono) {
         @content;
     }
 }
-  
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
 @mixin desktop {
-    @media (min-width: #{$desktop}) {
+    @media (min-width: v.$desktop) {
         @content;
     }
 }
 @mixin desktopXL {
-    @media (min-width: $desktopXL) {
+    @media (min-width: v.$desktopXL) {
         @content;
     }
 }
@@ -43,7 +45,7 @@
     //margin-top: 2rem;
     text-decoration: none;
     // text-transform: uppercase;
-    font-weight: $bold;
+    font-weight: v.$bold;
     border-radius: .5rem;
     //width: 90%;
     text-align: center;
@@ -55,18 +57,18 @@
         background-color: $tx-color;
         opacity: 0.7;
         color: $bg-color;
-        border: 1px solid $perla;
+        border: 1px solid v.$perla;
     } 
 }
 
-@mixin boton($bgColor, $display, $txtColor: $blanco) {
+@mixin boton($bgColor, $display, $txtColor: v.$blanco) {
     background-color: $bgColor;
     color: $txtColor;
-    font-weight: $bold;
+    font-weight: v.$bold;
     text-decoration: none;
     padding: 1rem 3rem;
     text-align: center;
-    margin-top: $separacion / 2;
+    margin-top: calc(v.$separacion / 2); //math.div(v.$separacion, 2) or calc(v.$separacion / 2)
     display: $display;
     border-radius: .5rem;
     border: none;

@@ -1,5 +1,8 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
 .header {
-    background-color: $noche;
+    background-color: v.$noche;
     padding: 0.6rem 0 0.6rem 0;
 
 }
@@ -14,7 +17,7 @@
         height: auto;
     }
 
-    @include tablet {
+    @include m.tablet {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -22,19 +25,19 @@
 }
 
 .navegacion {
-    @include tablet {
+    @include m.tablet {
         display: flex;
         align-items: center;
     }
     a {
-        color: $perla;
+        color: v.$perla;
         text-decoration: none;
         margin: 1rem 0 1rem 0;
         font-size: 1.4rem;
         display: block;
         text-align: center;
 
-        @include tablet {
+        @include m.tablet {
             margin-right: 2rem;
             font-size: 1.43rem;
 

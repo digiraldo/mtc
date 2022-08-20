@@ -1,47 +1,53 @@
+/* ---------- Botones ---------- */
+/* ---------- Botones ---------- */
+
+@use 'variables' as v;
+@use 'mixins' as m;
+
 .boton-amarillo {
-    @include boton($amarillo, inline-block);
+    @include m.boton(v.$amarillo, inline-block);
 }
 
 .boton-amarillo-block {
-    @include boton($amarillo, block);
+    @include m.boton(v.$amarillo, block);
 }
 
 .boton-verde {
-    @include boton($verde, inline-block);
+    @include m.boton(v.$verde, inline-block);
 }
 
 .boton-verde-block {
-    @include boton($verde, block);
+    @include m.boton(v.$verde, block);
 }
 
 .boton-noche {
-    @include boton($noche, inline-block);
+    @include m.boton(v.$noche, inline-block);
 }
 
 .boton-noche-block {
-    @include boton($noche, block);
+    @include m.boton(v.$noche, block);
 }
 
 .boton-perla {
-    @include boton($perla, inline-block, $noche);
+    @include m.boton(v.$perla, inline-block, v.$noche);
 }
 
 .boton-perla-block {
-    @include boton($perla, block, $noche);
+    @include m.boton(v.$perla, block, v.$noche);
 }
 
 .boton-roja {
-    @include boton($roja, inline-block);
+    @include m.boton(v.$roja, inline-block);
 }
 
 .boton-roja-block {
-    @include boton($roja, block);
+    @include m.boton(v.$roja, block);
 }
 
 .boton-destello {
-    @include boton($destello, inline-block, $perla);
+    @include m.boton(v.$destello, inline-block, v.$perla);
 }
 
 .boton-destello-block {
-    @include boton($destello, block, $perla);
+    @include m.boton(v.$destello, block, v.$perla);
 }

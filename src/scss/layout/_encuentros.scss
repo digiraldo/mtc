@@ -1,3 +1,6 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
 .no-webp .encuentros {
     background-image: url('../img/grande/cem-img-1.jpg');
 }
@@ -21,8 +24,8 @@
         content: "";
         height: 100%;
         width: 100%;
-        //background: darken($noche, 2%);
-        background: $noche;
+        //background: darken(v.$noche, 2%);
+        background: v.$noche;
         opacity: 0.4; 
         &.encuentros-cem {
             opacity: 0.8;
@@ -35,9 +38,9 @@
     width: 100%;
     max-width: 70rem;
     text-align: center;
-    color: $perla;
+    color: v.$perla;
     margin-bottom: 8rem;
-    text-shadow: -2px 2px 3px $noche;
+    text-shadow: -2px 2px 3px v.$noche;
 
     picture {
         max-width: 10rem;
@@ -45,24 +48,24 @@
         height: auto;
         vertical-align: middle;
         display: inline-block;
-        -webkit-filter: drop-shadow(-2px 2px 3px $noche);
-        filter: drop-shadow(-2px 2px 3px $noche);
+        -webkit-filter: drop-shadow(-2px 2px 3px v.$noche);
+        filter: drop-shadow(-2px 2px 3px v.$noche);
     }
     h2 {
         margin: .5rem 0;
         line-height: .8;
         font-size: 3rem;
-        font-weight: $bold;
+        font-weight: v.$bold;
     }
     p {
         margin: 0;
         line-height: 1;
         font-size: 2rem;
-        font-weight: $regular;
-        color: $perla;
+        font-weight: v.$regular;
+        color: v.$perla;
         margin-bottom: 2rem;
     }
-    @include tablet {
+    @include m.tablet {
         h2 {
             font-size: 4rem;
         }
@@ -71,7 +74,7 @@
         }
     }
     .btn-encuentros{
-        @include boto($roja, $perla);
+        @include m.boto(v.$roja, v.$perla);
     }
 
 }
@@ -85,5 +88,4 @@
     }
 }
     
-
-@include brillo(50%);
+@include m.brillo(50%);

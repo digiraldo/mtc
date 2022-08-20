@@ -1,19 +1,22 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
 .site-footer {
     .footer-up {
-        background-color: $negro;
+        background-color: v.$negro;
         padding: 2rem;
         margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        @include tablet {
+        @include m.tablet {
             flex-direction: row;
         }
         
         .footer-descarga {
             h4 {
-                color: $perla;
+                color: v.$perla;
                 margin: 1rem;
                 text-align: center;
                 font-size: 1.5rem;
@@ -27,7 +30,7 @@
                 li {
                     padding: .2rem 0;
                     a {
-                        color: $gris;
+                        color: v.$gris;
                         font-size: 1.4rem;
                         font-weight: 500;  
                     }     
@@ -43,7 +46,7 @@
         }
         .footer-acerca {
             h4 {
-                color: $perla;
+                color: v.$perla;
                 margin: 1rem;
                 text-align: center;
                 font-size: 1.5rem;
@@ -57,7 +60,7 @@
                 li {
                     padding: .2rem 0;
                     a {
-                        color: $gris;
+                        color: v.$gris;
                         font-size: 1.4rem;
                         font-weight: 500;  
                     }     
@@ -66,11 +69,11 @@
         }
     }
     .footer-downd {
-        background-color: $noche;
+        background-color: v.$noche;
         padding: .1rem;
         margin: 0;
         p {
-            color: $perla;
+            color: v.$perla;
             font-size: 1.5rem;
             text-align: center;
         } 
