@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio &bull; Matthew Training Center - Centro Mateo</title>
     <link rel="stylesheet" href="build/css/app.css">
+
+    <script type="text/javascript" src="build/js/jquery.gcal_flow.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <style type="text/css">
+        #gcf-ticker .gcf-header-block {
+          -webkit-border-bottom-left-radius: 4px;
+          -moz-border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+          float: left;
+          height: 100%;
+        }
+        #gcf-ticker .gcf-item-container-block {
+          margin-top: 0.2em;
+          overflow: hidden;
+        } 
+        #gcf-ticker .gcf-item-block .gcf-item-description {
+          padding-left: 1em;
+          color: #888;
+          font-size: 78%;
+        }
+        #gcf-ticker .gcf-item-description:before { content: " -- "; color: #aaa; }
+        </style>
+
 </head>
 <body>
     
@@ -28,9 +53,52 @@
     </header>
 
 
-    <main class="contenedor seccion">
-        <h1>Título Página</h1>
-    </main>
+    <h4>Ticker (template + js + CSS)</h4>
+    Code:<br>
+    <textarea id="ticker-sample-script" style="width: 100%" rows="10">
+
+    <div id="gcf-ticker" style="width: 100%; height: 1.4em;">
+      <div class="gcf-header-block">
+        <div class="gcf-title-block">
+            Updates:
+        </div>
+      </div>
+      <div class="gcf-item-container-block">
+        <div class="gcf-item-block">
+          <div class="gcf-item-header-block">
+            <div class="gcf-item-title-block">
+              (<span class="gcf-item-update-date">20/12</span>)
+              <span class="gcf-item-title">Item Title of Your event</span>
+               <span class="gcf-item-description"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+        $('#gcf-ticker').gCalFlow({
+          calid: '35b2qba53usalutistin2t916o@group.calendar.google.com',
+          apikey: 'AIzaSyB4x70PYpmslKqPy_fvvoMMTKADc9UdifE',
+          maxitem: 25,
+          scroll_interval: 5 * 1000,
+          date_formatter: function (date, allday_p) {
+            function pad(n) { return n < 10 ? "0"+n : n; }
+            return pad(date.getMonth()+1) + "/" + pad(date.getDate()) + "/" + date.getFullYear().toString().substr(-2);
+          }
+        });
+    </script>
+    </textarea>
+    
+    Rendered Result:<br>
+    <div id="ticker-sample-container">[Result]</div>
+    <script type="text/javascript">
+    var $ = jQuery;
+    $(function(){
+      $('#ticker-sample-container').html(
+        $('#ticker-sample-script')[0].value
+      );
+    });
+    </script>
 
 
     <footer class="site-footer">
@@ -64,6 +132,7 @@
         </div>
     </footer>
 
-    <script src="build/js/bundle.min.js"></script>
+    <!-- <script src="build/js/bundle.min.js"></script> -->
+
 </body>
 </html>

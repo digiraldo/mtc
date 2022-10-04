@@ -153,3 +153,8 @@ npm rebuild jpegtran-bin
 |ú = ALT + 163. |Ú = ALT + 233. |@ = ATR + 64.. |
 
 > [Inicio](#inicio-de-proyecto-o-plantilla-con-sass-y-gulp)
+
+
+##
+[Cambiar Color a SVG &infin;](https://codepen.io/digiraldo/pen/jOzjELa)
+> 

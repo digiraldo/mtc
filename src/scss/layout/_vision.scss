@@ -1,0 +1,110 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.banner-vision {
+    position: relative;
+    widows: 100%;
+    height: calc(108vh - 5rem);
+    background-image: url(../img/grande/Portada-Hadime-Mas.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-height: 35rem;
+    min-height: 25rem;
+    overflow: hidden;
+    @include m.tablet {
+        max-height: 30rem;
+        min-height: 20rem;
+    }
+}
+
+.capa {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(38, 50, 81);
+    background: linear-gradient(270deg, rgba(38, 50, 81, 0.4) 0%, rgba(0, 11, 41, 0.99) 100%);
+}
+
+.contenido-vision {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    @include m.tablet {
+        @include m.grid(2, 1, .5rem);
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    h2, p {
+        color: v.$perla;
+        text-align: center;
+        margin: .5rem 1rem;
+        @include m.telefono {
+            margin: 2.5rem 1.5rem;
+        }
+    }
+    .titulo-mision {
+        margin: 0 1.2rem 0 1.2rem;
+        h2 {
+        font-size: 2.2rem;
+        font-weight: v.$bold;
+        line-height: 1.1;
+        @include m.telefono {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin: 2rem 0 2rem 0;
+        }
+        @include m.tablet {
+            text-align: left;
+            font-size: 2.8rem;
+        }
+        }
+    }
+    .contenido-mision {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        
+        margin: 0 2rem 0 2rem;
+        @include m.tablet {
+            align-items: center;
+        }
+        p {
+            font-size: 1.6rem;
+            //margin-bottom: 1rem;
+            line-height: 1.4;
+            text-align: justify;
+            @include m.telefono {
+                font-size: 2rem;
+            }
+        }
+        a {
+            text-decoration: none;
+            @include m.telefono {
+                margin: 2rem 1.5rem;
+            }
+            @include m.tablet {
+                margin: 1.5rem1 1.5rem;
+            }
+            //@include m.boton(v.$perla, v.$noche);           
+        }
+
+    }
+}
+
+
+.boton-perla-block {
+    @include m.boto(v.$perla, v.$noche);
+}

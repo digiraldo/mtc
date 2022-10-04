@@ -41,7 +41,7 @@
 @mixin boto($bg-color, $tx-color) {
     background-color: $bg-color;
     color: $tx-color;
-    padding: 1rem 3rem;
+    padding: .6rem 3rem;
     //margin-top: 2rem;
     text-decoration: none;
     // text-transform: uppercase;
@@ -53,7 +53,7 @@
     transition: all .3s ease-in-out;
 
     &:hover {
-        padding: 1rem 4rem;
+        padding: .6rem 4rem;
         background-color: $tx-color;
         opacity: 0.7;
         color: $bg-color;
@@ -66,18 +66,18 @@
     color: $txtColor;
     font-weight: v.$bold;
     text-decoration: none;
-    padding: 1rem 3rem;
+    padding: .6rem 3rem;
     text-align: center;
-    margin-top: calc(v.$separacion / 2); //math.div(v.$separacion, 2) or calc(v.$separacion / 2)
+    margin-top: calc(v.$separacion / 4); //math.div(v.$separacion, 2) or calc(v.$separacion / 2)
     display: $display;
     border-radius: .5rem;
     border: none;
     transition: all .3s ease-in-out;
 
     &:hover {
-        padding: 1rem 4rem;
+        padding: .6rem 4rem;
         background-color: darken($bgColor, 10);
-        color: lighten($txtColor, 8);  // Aclarar color fondo;
+        color: lighten($txtColor, 20);  // Aclarar color fondo;
         cursor: pointer;
     }
 }

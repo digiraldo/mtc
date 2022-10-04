@@ -18,8 +18,8 @@
                 <nav class="navegacion navegacion-principal">
                     <a href="#inicio">Inicio</a>
                     <a href="#vision">Visión</a>
-                    <a href="#calendario">Eventos</a>
                     <a href="#entrenamiento">Entrenamiento</a>
+                    <a href="#calendario">Eventos</a>
                     <a href="#encuentros-cem">Encuentros</a>
                     <a href="#contacto">Contacto</a>
                 </nav>
@@ -27,6 +27,66 @@
         </div> <!-- Contenedor -->
     </header>
 
+    <div class="video">
+        <div class="overlay">
+            <div class="contenido-video">
+                <h5>Discípulos<br>Haciendo<br>Discípulos</h5>
+            </div>
+            <div class="play">
+                
+                <a href="https://youtu.be/xWHTJ-XvqpI" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-beat-fade" style="--fa-animation-duration: 4s; --fa-fade-opacity: 0.67; --fa-beat-scale: 1.2;">
+                        <img class="icon icon-reproducir" src="build/img/icon/circle-play-thin.svg" alt="Icono Circle" loading="lazy" fill="red">
+                    </i>
+                </a>
+            </div>
+            <div class="redes">
+                <a href="https://www.facebook.com/CentroMateo" class="facebook" target="_blank" rel="noopener noreferrer"><img src="build/img/icon/facebook-f.svg" alt="Logo Facebook" loading="lazy"></a>
+                <a href="https://www.instagram.com/centromateo/" class="instagram" target="_blank" rel="noopener noreferrer"><img src="build/img/icon/instagram.svg" alt="Logo Instagram" loading="lazy"></a>
+                <a href="https://www.youtube.com/channel/UChEoRAnQ8iTfiKkoS_rT2JA" class="youtube" target="_blank" rel="noopener noreferrer"><img src="build/img/icon/youtube.svg" alt="Logo Youtube" loading="lazy"></a>
+            </div>
+            <div id="gcf-ticker" style="">
+                <div class="gcf-header-block">
+                </div>
+                <div class="gcf-item-container-block">
+                <div class="gcf-item-block">
+                    <div class="gcf-item-header-block">
+                    <div class="gcf-item-title-block">
+                        <span class="gcf-item-title">Mateo </span>
+                        (<span class="gcf-item-daterange">28:19-20</span>)
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div> <!-- .overlay -->
+        <video autoplay playsinline muted loop> <!-- para los controles se usa: controls -->
+            <source src="build/video/cem-hero.mp4" type="video/mp4">
+            <source src="build/video/cem-hero.ogv" type="video/ogg">
+            <source src="build/video/cem-hero.webm" type="video/webm">
+            <track kind="subtitles" src="build/video/cem-hero-es.vtt" srclang="es" label="Español" default>
+            <track kind="subtitles" src="build/video/cem-hero-en.vtt" srclang="en" label="Inglés">
+        </video>
+    </div> <!-- .video -->
+
+    <section id="vision" class="banner-vision">
+        <div class="capa">
+            <div class="contenido-vision">
+                <div class="titulo-mision">
+                    <h2>Discípulos bien entrenados<br>Sirviendo entre las naciones</h2>
+                </div>
+                <div class="contenido-mision">
+                    <p>Nuestra meta es ver cientos de obreros fructíferos y entrenados sirviendo entre las naciones, haciendo miles de discípulos en el Reino de Dios para Su gloria.</p>
+                    <a class="boton-perla-block" href="#">Mas Información</a>
+                </div>
+            </div>
+        </div>
+    </section> <!-- .vision -->
+
+    <section class="entrenamiento" id="entrenamiento">
+        <h3>Oportunidades</h3>
+        <p>de ser Entrenado</p>
+    </section>
 
     <main class="contenedor seccion">
         <h1>Título Página</h1>
@@ -80,6 +140,15 @@
         </div>
     </footer>
 
-    <script src="build/js/bundle.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    
+    <!-- <script src="https://kit.fontawesome.com/2a290a3f5e.js" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- <script type="text/javascript" src="build/js/jquery.gcal_flow.js"></script>
+    <script type="text/javascript" src="build/js/eventos.js"></script> -->
+
+    <!-- < script src="build/js/bundle.min.js"></script> -->
+    <script type="text/javascript" src="build/js/app.js"></script>
 </body>
 </html>

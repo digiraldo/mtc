@@ -1,0 +1,193 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.video {
+    position: relative;
+    max-height: 70rem;
+    min-height: 60rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    @include m.desktop {
+        position: relative;
+        max-height: 70rem;
+        min-height: 56rem;
+        overflow: hidden;
+        display: block;
+    }
+
+    .overlay {
+        position: absolute;
+        background: rgb(0, 11, 41);
+        background: radial-gradient(circle, rgba(0, 11, 41, 0.1) 0%, rgba(0, 0, 0, 0.99) 100%);
+        height: 100%;
+        width: 100%;
+        @include m.grid(3, 3, 1rem);
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+
+        @include m.tablet {
+            @include m.grid(3, 3, 1rem);
+            //align-content: stretch;
+            //grid-auto-flow: dense;
+            //direction: rtl;
+        }
+    }
+
+    video {
+        z-index: -1;
+        width: auto;
+        display: block;
+
+        @include m.desktop {
+            width: 100%;
+        }
+    }
+
+    div {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.redes {
+    z-index: 1; // Como layers en photoshop, el video estaba encima de texto
+    grid-area: 2 / 3 / 4 / 4;
+    @include m.grid(1, 3, 2rem);
+    justify-items: center;
+    align-items: center;
+    img {
+        //fill: currentColor !important;
+        height: 2rem;
+        filter: v.$perlaSvg;
+    }
+
+    @include m.tablet {
+        grid-area: 1 / 1;
+        @include m.grid(3, 1, 2rem);
+    }
+
+    @include m.desktop {
+        grid-area: 3 / 1;
+        @include m.grid(3, 1, 1rem);
+    }
+}
+
+.play {
+    z-index: 2; // Como layers en photoshop, el video estaba encima de texto
+    grid-area: 2 / 2;
+    //order: 2;
+    text-align: center;
+    color: v.$perla;
+    img {
+        //fill: currentColor !important;
+        height: 6rem;
+        filter: v.$perlaSvg;
+    }
+
+
+    @include m.tablet {
+        //grid-column-start: 2;
+        //grid-row-start: -3;
+        img {
+            height: 8rem;
+        }
+    }
+
+    @include m.desktop {
+        // grid-column-start: 2;
+        // grid-row-start: -3;
+        img {
+            height: 10rem;
+        }
+    }
+}
+
+.contenido-video {
+    z-index: 3; // Como layers en photoshop, el video estaba encima de texto
+    //grid-column-start: 2;
+    //grid-row-start: 1;
+    grid-area: 1 / 2;
+
+    //order: 3;
+    h5 {
+        margin: 0;
+        padding: 0;
+        color: v.$perla;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+    @include m.tablet {
+        //grid-column-start: 3;
+        grid-area: 1 / 3;
+
+        h5 {
+            line-height: 1.3;
+        }
+    }
+
+    @include m.desktop {
+        grid-column-start: 3;
+
+        h5 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+    }
+}
+
+#gcf-ticker {
+    z-index: 4; // Como layers en photoshop, el video estaba encima de texto
+    //order: 4;
+    background: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    height: 2.4rem;
+    @include m.grid(0, 1, 0);
+    grid-area: 3 / 1 / 3 / 4;
+
+    @include m.desktop {
+        grid-area: 3 / 3;
+    }
+
+    .gcf-item-container-block {
+        margin-top: 0.2em;
+        overflow: hidden;
+        font-size: 1.6rem;
+    }
+
+    .gcf-item-title {
+        margin: 0;
+        padding: 0;
+        font-weight: 700;
+        margin-left: .3rem;
+        color: v.$perla;
+        a {
+            color: v.$perla;
+        }
+
+    }
+    .gcf-item-daterange {
+        margin: 0;
+        padding: 0;
+        margin-top: 0.2em;
+        overflow: hidden;
+        font-family: v.$fuente_calendario;
+        color: darken(v.$perla, 34%); // Oscurecer un color;;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    .gcf-item-header-block {
+        margin: 0;
+        padding: 0;
+        height: 2.2rem;
+    }
+}
